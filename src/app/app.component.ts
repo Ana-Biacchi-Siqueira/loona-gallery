@@ -1,17 +1,17 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { PhotoService } from './photos/photo/photo.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  })
+})
+export class AppComponent {
 
-  export class AppComponent {
+  photos: any[] = [];
 
-  photos = [];
+  constructor(photoService: PhotoService) {
 
-  constructor(http:HttpClient) {
-    console.log(http);
-   }
+    photoService.listFromUser('flavio').subscribe(photos => this.photos = photos);
+  }
 }
