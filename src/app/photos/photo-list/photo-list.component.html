@@ -1,1 +1,12 @@
-<loona-photos [photos]="photos"></loona-photos>
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input
+      class="rounded"
+      type="search"
+      placeholder="search..."
+      autofocus
+      (keyup)="filter = $any($event.target).value"
+    />
+  </form>
+</div>
+<loona-photos [photos]="photos | filterByDescription: filter"></loona-photos>
