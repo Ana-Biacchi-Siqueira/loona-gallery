@@ -9,3 +9,5 @@
   </form>
 </div>
 <loona-photos [photos]="photos | filterByDescription: filter"></loona-photos>
+
+<loona-fs-load-button (click)="load()" [hasMore]="hasMore"></loona-fs-load-button>
