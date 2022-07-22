@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PhotoFormComponent } from './photo-form.component';
@@ -8,7 +9,8 @@ describe('PhotoFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotoFormComponent ]
+      declarations: [ PhotoFormComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
 
