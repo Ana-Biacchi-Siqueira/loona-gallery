@@ -6,10 +6,6 @@ import { debounceTime } from "rxjs/operators";
   selector: 'loona-search',
   templateUrl: './search.component.html'
 })
-
-const element = event.currentTarget as HTMLInputElement
-const value = element.value
-
 export class SearchComponent implements OnInit, OnDestroy {
 
   @Output() onTyping = new EventEmitter<string>();

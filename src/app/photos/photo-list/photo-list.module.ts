@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 
 import { SearchComponent } from './search/search.component';
 import { CardModule } from './../../shared/components/card/card/card.module';
@@ -18,6 +18,6 @@ import { LoadButtonComponent } from './load-button/load-button.component';
     SearchComponent
   ],
   imports: [CommonModule, PhotoModule, CardModule],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PhotoListModule {}
