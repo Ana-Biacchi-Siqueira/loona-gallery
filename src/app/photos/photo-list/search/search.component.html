@@ -5,7 +5,8 @@
     type="search"
     placeholder="search..."
     autofocus
-    (keyup)="debounce.next($event.target.value)">
+    (keyup)="debounce.next($event.target.value)"
+    [value]="value">
     <i aria-hidden="true" class="fa fa-search ms-1"></i>
   </form>
 </div>
