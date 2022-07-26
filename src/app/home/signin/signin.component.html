@@ -7,6 +7,10 @@
             class="form-control"
             placeholder="user name"
             autofocus>
+            <small *ngIf="!loginForm.get('userName')!"
+            class="text-danger d-block mt-1">
+            User name is required!
+    </small>
     </div>
 
     <div class="form-group">
@@ -14,6 +18,10 @@
             type="password"
             class="form-control"
             placeholder="password">
+            <small *ngIf="loginForm.get('userName')"
+            class="text-danger d-block mt-1">
+            Password is required!
+    </small>
     </div>
 
     <button
